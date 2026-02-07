@@ -1,4 +1,5 @@
 "use client";
+// Force rebuild due to lint fixes
 
 import Background from "@/app/components/Background";
 import Projects from "@/app/components/Projects";
