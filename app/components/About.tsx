@@ -32,13 +32,13 @@ export default function About() {
                     className="text-gray-400 text-lg leading-relaxed"
                 >
                     <p className="mb-6">
-                        I'm <span className="text-white font-semibold">Ayooluwa Oyebade</span>, a Computer Engineering student and creative freelancer passionate about merging design with technology.
+                        I&apos;m <span className="text-white font-semibold">Ayooluwa Oyebade</span>, a Computer Engineering student and creative freelancer passionate about merging design with technology.
                     </p>
                     <p className="mb-6">
                         My journey involves mastering both the artistic and technical sides of the web. From crafting stunning graphics in <span className="text-cyan-400">Canva & Figma</span> to building robust applications with <span className="text-purple-400">React & Next.js</span>, I bring a holistic approach to every project.
                     </p>
                     <p>
-                        Currently pursuing my degree (Class of '27), I spend my free time freelancing, exploring new UI/UX trends, and refining my craft in frontend development.
+                        Currently pursuing my degree (Class of &apos;27), I spend my free time freelancing, exploring new UI/UX trends, and refining my craft in frontend development.
                     </p>
                 </motion.div>
             </div>
