@@ -1,21 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Laptop } from "lucide-react";
 
 const experiences = [
     {
-        year: "2022 - 2027 (Expected)",
+        year: "2022 - Present",
+        title: "Technical Lead & Lead Web Developer",
+        company: "OAU Law Review",
+        description: "Spearheaded the full-stack development of the official law review platform. Serve as the primary technical advisor, managing digital infrastructure, SEO strategy, and ensuring the accessibility of legal archives for the editorial board.",
+        icon: Laptop,
+    },
+    {
+        year: "2023 - 2027 (Expected)",
         title: "BSc Computer Engineering",
-        company: "University of Technology",
-        description: "Currently studying Computer Engineering. Focusing on software systems, embedded engineering, and digital logic design.",
+        company: "Obafemi Awolowo University",
+        description: "Specializing in embedded systems, digital logic design, and software architecture. Building a strong foundation in both hardware and software integration.",
         icon: GraduationCap,
     },
     {
         year: "2020 - Present",
-        title: "Freelance Creative Developer",
-        company: "Self-Employed",
-        description: "Delivering custom web solutions and high-impact graphic designs. Specialized in building brand identities, UI/UX design, and performant web applications using React and Next.js.",
+        title: "Lead Creative Developer & UI/UX Designer",
+        company: "Freelance",
+        description: "Architecting high-performance web applications and brand identities for diverse clients. Merging technical precision with artistic direction to deliver scalable, user-centric digital solutions using Next.js and modern design systems.",
         icon: Briefcase,
     },
 ];
