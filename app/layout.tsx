@@ -5,7 +5,7 @@ import "./globals.css"; // <--- THIS IS THE MISSING LINK
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Creative Portfolio",
+  title: "Ayooluwa Oyebade | Creative Developer & Engineer",
   description: "Built with Next.js and Tailwind CSS",
 };
 

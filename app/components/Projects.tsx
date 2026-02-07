@@ -8,7 +8,7 @@ const projects = [
         title: "Weather App",
         description: "A weather app built with Next.js and OpenWeather API. Features real-time weather updates and dark mode UI.",
         tags: ["Next.js", "TypeScript", "OpenWeather API"],
-        link: "https://weather-app-dun-psi-81.vercel.app/",
+        link: "https://weather-appp-xi.vercel.app",
         github: "https://github.com/Ayosensei/weather-app",
         color: "from-purple-500 to-cyan-500", // Custom gradient for this card
     },
@@ -35,6 +35,30 @@ const projects = [
         link: "https://crypto-tracker-y6b8.vercel.app/",
         github: "https://github.com/Ayosensei/crypto-tracker",
         color: "from-pink-500 to-rose-500",
+    },
+    {
+        title: "Trade Journal",
+        description: "A comprehensive trading journal for tracking trades, analyzing performance, and refining strategies.",
+        tags: ["React", "Node.js", "Tailwind"],
+        link: "https://trade-journal-sigma.vercel.app/",
+        github: "https://github.com/Ayosensei/trade-journal",
+        color: "from-yellow-400 to-orange-500",
+    },
+    {
+        title: "Typify",
+        description: "A sleek typing practice application designed to improve speed and accuracy with a minimalist interface.",
+        tags: ["Next.js", "TypeScript", "Tailwind"],
+        link: "https://typify-rho.vercel.app/",
+        github: "https://github.com/Ayosensei/typify",
+        color: "from-green-400 to-teal-500",
+    },
+    {
+        title: "OAULR Website",
+        description: "The official website for the Obafemi Awolowo University Law Review, featuring archives and publications.",
+        tags: ["Next.js", "TypeScript", "Tailwind"],
+        link: "https://oaulawreports.vercel.app",
+        github: "https://github.com/Ayosensei/oaulr-frontend",
+        color: "from-indigo-500 to-blue-600",
     },
 ];
 
@@ -104,7 +128,7 @@ export default function Projects() {
                                         href={project.link}
                                         className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-bold text-sm hover:bg-gray-200 transition-colors"
                                     >
-                                        <ExternalLink size={16} /> Live Demo
+                                        <ExternalLink size={16} /> Live
                                     </a>
                                     <a
                                         href={project.github}

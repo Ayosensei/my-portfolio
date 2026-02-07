@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -10,12 +10,34 @@ export default function Contact() {
         message: ""
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const { name, email, message } = formData;
-        const subject = `Project Inquiry from ${name}`;
-        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-        window.location.href = `mailto:ayosensei22@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        setStatus("submitting");
+
+        // REPLACE "YOUR_FORMSPREE_ID" WITH YOUR ACTUAL ID FROM FORMSPREE.IO
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/mykdywvn";
+
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            setStatus("error");
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -97,11 +119,21 @@ export default function Contact() {
                             required
                         />
                     </div>
+                    
+                    {/* Status Messages */}
+                    {status === "success" && (
+                        <p className="text-green-400 text-sm font-medium text-center">Message sent successfully! I'll get back to you soon.</p>
+                    )}
+                    {status === "error" && (
+                        <p className="text-red-400 text-sm font-medium text-center">Something went wrong. Please try again later.</p>
+                    )}
+
                     <button
                         type="submit"
-                        className="w-full py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:opacity-90 transition-opacity"
+                        disabled={status === "submitting"}
+                        className="w-full py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        Send Message
+                        {status === "submitting" ? "Sending..." : "Send Message"}
                     </button>
                 </motion.form>
             </div>
