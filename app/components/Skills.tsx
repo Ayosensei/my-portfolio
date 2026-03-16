@@ -85,12 +85,13 @@ export default function Skills() {
 
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
-                  <span
+                  <motion.span
                     key={skill}
-                    className={`px-3 py-1.5 text-sm text-gray-300 bg-black/30 border border-white/5 rounded-lg transition-colors duration-300 ${category.borderColor} hover:text-white`}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className={`px-3 py-1.5 text-sm text-gray-300 bg-black/30 border border-white/5 rounded-lg transition-colors duration-300 ${category.borderColor} hover:text-white hover:bg-white/5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] cursor-default`}
                   >
                     {skill}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

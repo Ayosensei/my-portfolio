@@ -7,7 +7,7 @@ const experiences = [
   {
     year: "2022 - Present",
     title: "Technical Lead & Lead Web Developer",
-    company: "OAU Law Review",
+    company: "OAU Law Reports",
     description:
       "Spearheaded the full-stack development of the official law review platform. Serve as the primary technical advisor, managing digital infrastructure, SEO strategy, and ensuring the accessibility of legal archives for the editorial board.",
     icon: Laptop,

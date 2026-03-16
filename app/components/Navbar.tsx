@@ -48,6 +48,12 @@ export default function Navbar() {
             Journey
           </a>
           <a
+            href="#testimonials"
+            className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full"
+          >
+            Reviews
+          </a>
+          <a
             href="#contact"
             className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full"
           >
@@ -92,6 +98,13 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Journey
+          </a>
+          <a
+            href="#testimonials"
+            className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Reviews
           </a>
           <a
             href="#contact"
