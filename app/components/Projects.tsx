@@ -6,74 +6,44 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Cyber-Weather",
+    title: "CloverBoys",
     description:
-      "A futuristic, immersive weather dashboard built for the Year 2096. Features a high-fidelity cyberpunk aesthetic with real-time atmospheric data, 3D interactive radar systems, and glassmorphic UI elements.",
-    tags: ["Next.js", "TypeScript", "Open-Meteo API"],
-    link: "https://cyber-weather-app.vercel.app/",
-    github: "https://github.com/Ayosensei/cyber-weather",
-    color: "from-purple-500/20 to-cyan-500/20",
-    accent: "#a855f7",
+      "A high-performance web platform facilitating early pattern recognition and community-driven Web3 engagement. Features immersive scroll-driven animations and a luxury-themed brand identity.",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Canvas"],
+    link: "https://cloverboys.vercel.app",
+    github: "#",
+    color: "from-green-500/20 to-emerald-500/20",
+    accent: "#10b981",
   },
   {
-    title: "Football Insight Hub",
+    title: "SIGNAL",
     description:
-      "A football statistics and analysis platform built with React, also features dark mode UI.",
-    tags: ["React", "Tailwind", "Football API"],
-    link: "https://football-insight-hub.vercel.app/",
-    github: "https://github.com/Ayosensei/football-insight-hub",
-    color: "from-blue-500/20 to-emerald-500/20",
-    accent: "#3b82f6",
-  },
-  {
-    title: "AI Storyteller",
-    description:
-      "An AI-powered application that generates unique bedtime stories based on user prompts.",
-    tags: ["Gemini API", "Node.js", "React"],
-    link: "https://ai-storyteller-blush.vercel.app/",
-    github: "https://github.com/Ayosensei/ai-storyteller",
-    color: "from-orange-500/20 to-red-500/20",
-    accent: "#f97316",
-  },
-  {
-    title: "Crypto Portfolio",
-    description:
-      "Real-time cryptocurrency tracker with live charts and portfolio management tools.",
-    tags: ["WebSockets", "Chart.js", "API"],
-    link: "https://crypto-tracker-y6b8.vercel.app/",
-    github: "https://github.com/Ayosensei/crypto-tracker",
-    color: "from-pink-500/20 to-rose-500/20",
-    accent: "#ec4899",
-  },
-  {
-    title: "Trade Journal",
-    description:
-      "A comprehensive trading journal for tracking trades, analyzing performance, and refining strategies.",
-    tags: ["React", "Node.js", "Tailwind"],
-    link: "https://trade-journal-sigma.vercel.app/",
-    github: "https://github.com/Ayosensei/trade-journal",
-    color: "from-yellow-400/20 to-orange-500/20",
-    accent: "#eab308",
-  },
-  {
-    title: "Typify",
-    description:
-      "A sleek typing practice application designed to improve speed and accuracy with a minimalist interface.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://typify-rho.vercel.app/",
-    github: "https://github.com/Ayosensei/typify",
-    color: "from-green-400/20 to-teal-500/20",
-    accent: "#22c55e",
+      "A high-performance, dark-themed match-3 web game with a recursive match-and-cascade system, multi-input interaction, and a premium 'Cinematic Dark' aesthetic.",
+    tags: ["React", "Vite", "Vanilla CSS", "Game Engine"],
+    link: "https://signal-cloverboys.vercel.app/",
+    github: "#",
+    color: "from-red-500/20 to-orange-500/20",
+    accent: "#ef4444",
   },
   {
     title: "OAULR Website",
     description:
-      "The official website for the Obafemi Awolowo University Law Reports, featuring archives and publications.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+      "The official digital legal repository for the Faculty of Law, Obafemi Awolowo University. Built with Next.js App Router for high-traffic academic research and legal archiving.",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "https://oaulawreports.vercel.app",
     github: "https://github.com/Ayosensei/oaulr-frontend",
     color: "from-indigo-500/20 to-blue-600/20",
     accent: "#6366f1",
+  },
+  {
+    title: "Trade Journal",
+    description:
+      "A comprehensive trading performance tracker featuring a detailed trade logging system, interactive Chart.js dashboards, and secure JWT/Firebase authentication.",
+    tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+    link: "https://trade-journal-sigma.vercel.app/",
+    github: "https://github.com/Ayosensei/trade-journal",
+    color: "from-yellow-400/20 to-orange-500/20",
+    accent: "#eab308",
   },
 ];
 
