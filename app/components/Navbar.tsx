@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-      <div className="flex items-center gap-2 p-2 bg-white/10 dark:bg-black/30 backdrop-blur-md border border-white/10 dark:border-white/5 rounded-full shadow-lg">
+      <div className="flex items-center gap-2 p-2 bg-black/30 backdrop-blur-md border border-white/5 rounded-full shadow-lg">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="p-2 text-gray-300 hover:text-white transition-colors lg:hidden focus:outline-none"
