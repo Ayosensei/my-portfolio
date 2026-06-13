@@ -59,7 +59,7 @@ export default function Contact() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight"
         >
@@ -72,7 +72,7 @@ export default function Contact() {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
         >
@@ -84,7 +84,7 @@ export default function Contact() {
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-md mx-auto space-y-4 text-left"
           onSubmit={handleSubmit}

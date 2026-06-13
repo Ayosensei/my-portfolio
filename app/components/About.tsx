@@ -11,7 +11,7 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -27,7 +27,7 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-gray-400 text-lg leading-relaxed"
                 >

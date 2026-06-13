@@ -37,7 +37,7 @@ export default function Experience() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mb-16 text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -58,7 +58,7 @@ export default function Experience() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className={`flex flex-col md:flex-row ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""

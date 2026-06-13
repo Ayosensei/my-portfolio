@@ -21,7 +21,7 @@ export default function Testimonials() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
@@ -38,7 +38,7 @@ export default function Testimonials() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col items-center text-center max-w-sm w-full"
             >
