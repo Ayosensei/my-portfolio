@@ -53,8 +53,7 @@ export default function Contact() {
       id="contact"
       className="min-h-[80vh] flex flex-col justify-center items-center px-4 text-center relative overflow-hidden py-20"
     >
-      {/* Background Gradient for focus */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/20 rounded-full blur-[100px] -z-10" />
+
 
       <div className="max-w-4xl mx-auto z-10 w-full">
         <motion.h2
