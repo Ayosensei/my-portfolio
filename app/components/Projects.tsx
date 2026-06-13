@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -54,72 +54,18 @@ function ProjectCard({
   project: (typeof projects)[0];
   index: number;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Motion values for tilt effect
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  // Smooth springs for natural feeling
-  const mouseXSpring = useSpring(mouseX, { stiffness: 150, damping: 20 });
-  const mouseYSpring = useSpring(mouseY, { stiffness: 150, damping: 20 });
-
-  // Transforms for 2.5D tilt
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
-
-  // Transforms for content depth (inner parallax)
-  const contentX = useTransform(mouseXSpring, [-0.5, 0.5], ["-10px", "10px"]);
-  const contentY = useTransform(mouseYSpring, [-0.5, 0.5], ["-10px", "10px"]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-
-    // Calculate relative mouse position from -0.5 to 0.5
-    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
-    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
-
-    mouseX.set(xPct);
-    mouseY.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="perspective-1000"
     >
-      <motion.div
-        ref={cardRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-        }}
-        className="group relative h-full bg-black/40 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col justify-between hover:border-white/20 transition-colors duration-500 overflow-hidden shadow-2xl"
+      <div
+        className="group relative h-full bg-black/40 border border-white/10 p-8 rounded-3xl flex flex-col justify-between hover:border-white/20 transition-colors duration-500 overflow-hidden shadow-2xl"
       >
-        {/* Dynamic Glow Effect */}
-        <motion.div
-          style={{
-            x: contentX,
-            y: contentY,
-            background: `radial-gradient(circle at center, ${project.accent}33 0%, transparent 70%)`,
-          }}
-          className="absolute -inset-24 opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-500 pointer-events-none -z-10"
-        />
-
-        {/* Content with Depth */}
-        <motion.div style={{ translateZ: 50 }}>
+        {/* Content */}
+        <div>
           <div className="flex justify-between items-start mb-6">
             <h3 className="text-3xl font-bold text-white tracking-tight">
               {project.title}
@@ -143,13 +89,10 @@ function ProjectCard({
               </span>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* Action Buttons with higher depth */}
-        <motion.div
-          style={{ translateZ: 80 }}
-          className="flex items-center gap-4 mt-auto"
-        >
+        {/* Action Buttons */}
+        <div className="flex items-center gap-4 mt-auto">
           <a
             href={project.link}
             target="_blank"
@@ -166,13 +109,13 @@ function ProjectCard({
           >
             <Github size={16} /> Code
           </a>
-        </motion.div>
+        </div>
 
         {/* Interactive Border Highlight */}
         <div
           className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-20`}
         />
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
