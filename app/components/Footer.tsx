@@ -4,7 +4,7 @@ import { Github, Mail } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="py-8 text-center text-gray-500 text-sm bg-black/50 backdrop-blur-md border-t border-white/5">
+        <footer className="py-8 text-center text-gray-500 text-sm bg-black/80 border-t border-white/5">
             <div className="flex justify-center gap-6 mb-4">
                 <a
                     href="https://github.com/Ayosensei"
