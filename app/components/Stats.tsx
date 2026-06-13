@@ -36,7 +36,7 @@ export default function Stats() {
                 delay: index * 0.1,
                 ease: [0.23, 1, 0.32, 1],
               }}
-              className="relative group p-6 md:p-10 bg-black/40 backdrop-blur-xl border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-white/10 transition-colors duration-500 flex flex-col items-center text-center w-full max-w-[280px]"
+              className="relative group p-6 md:p-10 bg-black/40 border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-white/10 transition-colors duration-500 flex flex-col items-center text-center w-full max-w-[280px]"
             >
               {/* Subtle background glow */}
               <div
@@ -50,13 +50,11 @@ export default function Stats() {
               </div>
 
               <div className="relative z-10 w-full">
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                <h3
                   className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-2"
                 >
                   {stat.value}
-                </motion.h3>
+                </h3>
                 <p className="text-gray-500 text-xs md:text-sm font-bold uppercase tracking-[0.2em]">
                   {stat.label}
                 </p>

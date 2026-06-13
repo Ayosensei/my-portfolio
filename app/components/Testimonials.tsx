@@ -40,7 +40,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/[0.08] transition-colors duration-500 flex flex-col items-center text-center max-w-sm w-full"
+              className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col items-center text-center max-w-sm w-full"
             >
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -75,9 +75,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Decorative Background Glows */}
-        <div className="absolute -top-24 -left-24 w-64 h-64 bg-purple-500/10 rounded-full blur-[120px] -z-10" />
-        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-cyan-500/10 rounded-full blur-[120px] -z-10" />
+
       </div>
 
       {/* Subtle Bottom Border Line */}
