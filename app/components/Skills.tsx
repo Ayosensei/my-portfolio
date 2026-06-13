@@ -74,7 +74,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors duration-300"
+              className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
                 <category.icon className={`w-6 h-6 ${category.color}`} />
@@ -85,13 +85,12 @@ export default function Skills() {
 
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
-                  <motion.span
+                  <span
                     key={skill}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    className={`px-3 py-1.5 text-sm text-gray-300 bg-black/30 border border-white/5 rounded-lg transition-colors duration-300 ${category.borderColor} hover:text-white hover:bg-white/5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] cursor-default`}
+                    className={`px-3 py-1.5 text-sm text-gray-300 bg-black/30 border border-white/5 rounded-lg transition-all duration-300 ${category.borderColor} hover:scale-105 hover:-translate-y-[2px] hover:text-white hover:bg-white/5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] cursor-default`}
                   >
                     {skill}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
             </motion.div>
