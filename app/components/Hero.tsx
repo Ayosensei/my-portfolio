@@ -9,10 +9,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center px-4 pt-20 overflow-hidden"
     >
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-[120px] -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-[120px] -z-10 animate-pulse delay-700" />
-
       <div className="max-w-5xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -95,6 +91,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="will-change-transform"
         >
           <ArrowDown size={20} className="text-cyan-400/50" />
         </motion.div>
