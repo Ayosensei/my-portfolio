@@ -21,13 +21,13 @@ export default function About() {
                 {/* Right Column: Bio */}
                 <RevealOnScroll variant="right" delay={200} className="text-gray-400 text-lg leading-relaxed">
                     <p className="mb-6">
-                        I&apos;m <span className="text-white font-semibold">Ayooluwa Oyebade</span>, a Computer Engineering student and creative freelancer passionate about merging design with technology.
+                        I'm Ayooluwa Oyebade — a Computer Engineering student at OAU and a Creative Developer with 5 years of building things on the web. I work at the intersection of frontend engineering and design, which means I can take a project from a rough idea all the way to a polished, deployed product.
                     </p>
                     <p className="mb-6">
-                        My journey involves mastering both the artistic and technical sides of the web. From crafting stunning graphics in <span className="text-cyan-400">Canva & Figma</span> to building robust applications with <span className="text-purple-400">React & Next.js</span>, I bring a holistic approach to every project.
+                        What sets me apart is that I don't just write code — I think about the product. From architecture decisions and performance to typography and motion design, I care about the whole experience. My clients get a developer who can think like a designer and a designer who can ship like a developer.
                     </p>
                     <p>
-                        Currently pursuing my degree (Class of &apos;27), I spend my free time freelancing, exploring new UI/UX trends, and refining my craft in frontend development.
+                        Currently available for freelance and contract work — web apps, landing pages, brand identities, and everything in between. Based in Ile-Ife, Nigeria. Working globally.
                     </p>
                 </RevealOnScroll>
             </div>

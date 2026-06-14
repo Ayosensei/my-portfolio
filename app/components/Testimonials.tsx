@@ -7,9 +7,22 @@ const testimonials = [
   {
     name: "Oyeyemi Oyebade",
     role: "Managing Editor, OAU Law Reports",
-    content:
-      "Ayooluwa transformed our digital presence. The OAU Law Reports platform is now a world-class legal archive, thanks to his technical expertise and eye for design.",
+    content: "Ayooluwa transformed our digital presence. The OAU Law Reports platform is now a world-class legal archive, thanks to his technical expertise and eye for design.",
     avatar: "OO",
+    rating: 5,
+  },
+  {
+    name: "Client Name",
+    role: "Founder, Company Name",
+    content: "Working with Ayooluwa was seamless from start to finish. He understood the brief immediately, asked the right questions, and delivered a product that exceeded what we imagined.",
+    avatar: "CN",
+    rating: 5,
+  },
+  {
+    name: "Client Name",
+    role: "Product Lead, Company Name",
+    content: "Ayooluwa brings a rare combination of technical depth and design sensibility. He doesn't just build what you ask for — he makes it better.",
+    avatar: "CN",
     rating: 5,
   },
 ];
@@ -27,7 +40,7 @@ export default function Testimonials() {
           </p>
         </RevealOnScroll>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <RevealOnScroll
               key={index}
