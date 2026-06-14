@@ -43,7 +43,7 @@ const projects = [
   },
   {
     title: "Saturn Onchain",
-    description: "A minimal, high-end digital hub for a Web3/blockchain authority. Dark void aesthetic with subtle motion and premium typography — designed to feel like a high-end crypto terminal.",
+    description: "A minimal, high-end digital hub for a Web3/blockchain authority. Dark void aesthetic with subtle motion and premium typography, designed to feel like a high-end crypto terminal.",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     link: "https://saturn-onchain.vercel.app/",
     github: "#",

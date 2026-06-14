@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed mb-10"
         >
-          I am <span className="text-white font-medium">Ayooluwa Oyebade</span>, a Computer Engineer and Creative Developer. I design and build high-performance web apps and brand identities — from concept to deployment — for startups, communities, and creators.
+          I am <span className="text-white font-medium">Ayooluwa Oyebade</span>, a Computer Engineer and Creative Developer. I design and build high-performance web apps and brand identities, from concept to deployment, for startups, communities, and creators.
         </motion.p>
 
         <motion.div

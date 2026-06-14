@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: "Client Name",
     role: "Product Lead, Company Name",
-    content: "Ayooluwa brings a rare combination of technical depth and design sensibility. He doesn't just build what you ask for — he makes it better.",
+    content: "Ayooluwa brings a rare combination of technical depth and design sensibility. He doesn't just build what you ask for, he makes it better.",
     avatar: "CN",
     rating: 5,
   },
