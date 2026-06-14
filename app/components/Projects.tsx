@@ -7,9 +7,8 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 const projects = [
   {
     title: "CloverBoys",
-    description:
-      "A high-performance web platform facilitating early pattern recognition and community-driven Web3 engagement. Features immersive scroll-driven animations and a luxury-themed brand identity.",
-    tags: ["Next.js", "TypeScript", "Framer Motion", "Canvas"],
+    description: "A high-performance Web3 community platform with immersive scroll-driven animations, Canvas-powered backgrounds, and a luxury dark brand identity built to establish market positioning.",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Canvas API"],
     link: "https://cloverboys.vercel.app",
     github: "#",
     color: "from-green-500/20 to-emerald-500/20",
@@ -17,8 +16,7 @@ const projects = [
   },
   {
     title: "SIGNAL",
-    description:
-      "A high-performance, dark-themed match-3 web game with a recursive match-and-cascade system, multi-input interaction, and a premium 'Cinematic Dark' aesthetic.",
+    description: "A dark-themed match-3 web game with a recursive cascade engine, multi-input system supporting drag, click, and mobile swipe, and a premium Cinematic Dark UI aesthetic.",
     tags: ["React", "Vite", "Vanilla CSS", "Game Engine"],
     link: "https://signal-cloverboys.vercel.app/",
     github: "#",
@@ -26,20 +24,45 @@ const projects = [
     accent: "#ef4444",
   },
   {
-    title: "OAULR Website",
-    description:
-      "The official digital legal repository for the Faculty of Law, Obafemi Awolowo University. Built with Next.js App Router for high-traffic academic research and legal archiving.",
-    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "https://oaulawreports.vercel.app",
-    github: "https://github.com/Ayosensei/oaulr-frontend",
-    color: "from-indigo-500/20 to-blue-600/20",
+    title: "TacticLab",
+    description: "A tactical analysis engine bridging Football Manager theory and visual tactic building. Monorepo architecture with a Rust/WASM core engine, Next.js frontend, and Supabase backend.",
+    tags: ["Next.js", "TypeScript", "Rust", "WASM", "Supabase", "Turborepo"],
+    link: "https://tacticlab-web.vercel.app",
+    github: "#",
+    color: "from-blue-500/20 to-indigo-500/20",
     accent: "#6366f1",
   },
   {
+    title: "OAULR Website",
+    description: "The official digital legal repository for the Faculty of Law, OAU. Built for high-traffic academic research with Next.js App Router, optimised SSR, and sub-second page loads for large legal archives.",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "MongoDB"],
+    link: "https://oaulawreports.vercel.app",
+    github: "https://github.com/Ayosensei/oaulr-frontend",
+    color: "from-indigo-500/20 to-blue-600/20",
+    accent: "#3b82f6",
+  },
+  {
+    title: "Saturn Onchain",
+    description: "A minimal, high-end digital hub for a Web3/blockchain authority. Dark void aesthetic with subtle motion and premium typography — designed to feel like a high-end crypto terminal.",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    link: "https://saturn-onchain.vercel.app/",
+    github: "#",
+    color: "from-purple-500/20 to-violet-500/20",
+    accent: "#a855f7",
+  },
+  {
+    title: "Typify",
+    description: "A minimalist, high-performance typing speed application with real-time keystroke logic, WPM speed curve charts, and a distraction-free focus mode built for accuracy and speed.",
+    tags: ["React", "Vite", "Zustand", "Chart.js", "Framer Motion"],
+    link: "https://typify-rho.vercel.app/",
+    github: "#",
+    color: "from-cyan-500/20 to-teal-500/20",
+    accent: "#06b6d4",
+  },
+  {
     title: "Trade Journal",
-    description:
-      "A comprehensive trading performance tracker featuring a detailed trade logging system, interactive Chart.js dashboards, and secure JWT/Firebase authentication.",
-    tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+    description: "A full-stack trading performance tracker with a detailed logging system, Chart.js equity curve dashboards, position sizing tools, and secure JWT/Firebase authentication.",
+    tags: ["React", "Node.js", "MongoDB", "Chart.js", "Firebase"],
     link: "https://trade-journal-sigma.vercel.app/",
     github: "https://github.com/Ayosensei/trade-journal",
     color: "from-yellow-400/20 to-orange-500/20",
