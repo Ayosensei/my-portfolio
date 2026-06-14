@@ -1,50 +1,36 @@
 "use client";
 
 import RevealOnScroll from "./RevealOnScroll";
-import { Code, Palette, Terminal } from "lucide-react";
+import { Code, Palette, Terminal, Sparkles } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Frontend Dev",
     icon: Code,
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Framer Motion",
-    ],
+    skills: ["React 18", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Framer Motion", "Zustand"],
     color: "text-cyan-400",
     borderColor: "group-hover:border-cyan-400/50",
   },
   {
-    title: "Design & Creative",
+    title: "Design & UI/UX",
     icon: Palette,
-    skills: [
-      "UI/UX Design",
-      "Graphics Design",
-      "Figma",
-      "Canva",
-      "Framer",
-      "Adobe Suite",
-    ],
+    skills: ["UI/UX Design", "Figma", "Penpot", "Inkscape", "Canva", "Brand Identity", "Wireframing", "Design Systems"],
     color: "text-purple-400",
     borderColor: "group-hover:border-purple-400/50",
   },
   {
-    title: "Tools & Workflow",
+    title: "Backend & Infra",
     icon: Terminal,
-    skills: [
-      "Git",
-      "VS Code",
-      "Freelancing",
-      "Responsive Design",
-      "Web Optimization",
-    ],
+    skills: ["Node.js", "Supabase", "Firebase", "MongoDB", "PostgreSQL", "REST APIs", "Vercel", "GitHub Actions"],
     color: "text-pink-400",
     borderColor: "group-hover:border-pink-400/50",
+  },
+  {
+    title: "AI & Emerging Tech",
+    icon: Sparkles,
+    skills: ["Gemini API", "Prompt Engineering", "Rust", "WebAssembly", "Canvas API", "Web3 Basics", "Game Engineering"],
+    color: "text-amber-400",
+    borderColor: "group-hover:border-amber-400/50",
   },
 ];
 
@@ -61,7 +47,7 @@ export default function Skills() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <RevealOnScroll
               key={category.title}
