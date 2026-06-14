@@ -5,27 +5,31 @@ import { Briefcase, GraduationCap, Calendar, Laptop } from "lucide-react";
 
 const experiences = [
   {
-    year: "2022 - Present",
+    year: "2022 – Present",
     title: "Technical Lead & Lead Web Developer",
     company: "OAU Law Reports",
-    description:
-      "Spearheaded the full-stack development of the official law review platform. Serve as the primary technical advisor, managing digital infrastructure, SEO strategy, and ensuring the accessibility of legal archives for the editorial board.",
+    description: "Spearheaded full-stack development of the official law review platform using Next.js, TypeScript, and MongoDB. Optimised SSR and database queries to achieve sub-second page loads for large-scale legal archives. Manages digital infrastructure, SEO strategy, and automated deployment via Vercel and GitHub Actions.",
     icon: Laptop,
   },
   {
-    year: "2023 - 2027 (Expected)",
+    year: "2025 – Present",
+    title: "Lead Creative Developer",
+    company: "For Better Days",
+    description: "Leading a professional Web3 community, architecting and deploying the community's digital hub. Driving UI/UX design and brand strategy to establish a distinct visual identity aligned with the community's mission.",
+    icon: Briefcase,
+  },
+  {
+    year: "2023 – 2027 (Expected)",
     title: "BSc Computer Engineering",
     company: "Obafemi Awolowo University",
-    description:
-      "Specializing in embedded systems, digital logic design, and software architecture. Building a strong foundation in both hardware and software integration.",
+    description: "Specialising in embedded systems, digital logic design, and software architecture. Building a strong foundation in hardware-software integration while shipping real-world products alongside academics.",
     icon: GraduationCap,
   },
   {
-    year: "2020 - Present",
+    year: "2020 – Present",
     title: "Lead Creative Developer & UI/UX Designer",
-    company: "Freelance",
-    description:
-      "Architecting high-performance web applications and brand identities for diverse clients. Merging technical precision with artistic direction to deliver scalable, user-centric digital solutions using Next.js and modern design systems.",
+    company: "Freelance & Remote",
+    description: "Architecting high-performance web applications and brand identities for clients across Nigeria and remotely. End-to-end product lifecycle: discovery, design (Figma/Canva), development, and deployment using Next.js and modern design systems.",
     icon: Briefcase,
   },
 ];
