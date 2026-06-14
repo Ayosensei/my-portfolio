@@ -1,15 +1,14 @@
 export default function Background() {
-    return (
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-            {/* Abstract Blob 1: Purple */}
-            <div
-                className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-900/30 rounded-full blur-[80px]"
-            />
-
-            {/* Abstract Blob 2: Blue/Cyan */}
-            <div
-                className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[80px]"
-            />
-        </div>
-    );
+  return (
+    <div
+      className="fixed inset-0 z-[-1] pointer-events-none"
+      style={{
+        background: `
+          radial-gradient(ellipse 60% 50% at 0% 0%, rgba(88, 28, 135, 0.25) 0%, transparent 70%),
+          radial-gradient(ellipse 50% 40% at 100% 100%, rgba(22, 78, 99, 0.2) 0%, transparent 70%),
+          rgb(10, 10, 10)
+        `,
+      }}
+    />
+  );
 }
