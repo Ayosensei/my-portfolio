@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import { Code, Palette, Terminal } from "lucide-react";
 
 const skillCategories = [
@@ -52,28 +52,20 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="mb-16 text-center"
-        >
+        <RevealOnScroll className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technical <span className="text-gray-500">Arsenal</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             The tools and technologies I use to bring ideas to life.
           </p>
-        </motion.div>
+        </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <motion.div
+            <RevealOnScroll
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1 }}
+              delay={index * 100}
               className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -93,7 +85,7 @@ export default function Skills() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </RevealOnScroll>
           ))}
         </div>
       </div>

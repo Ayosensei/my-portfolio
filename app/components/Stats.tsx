@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import { CheckCircle2, Code2, Users2, Github } from "lucide-react";
 
 const stats = [
@@ -26,16 +26,9 @@ export default function Stats() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <RevealOnScroll
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: [0.23, 1, 0.32, 1],
-              }}
+              delay={index * 100}
               className="relative group p-6 md:p-10 bg-black/40 border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-white/10 transition-colors duration-500 flex flex-col items-center text-center w-full max-w-[280px]"
             >
               {/* Subtle background glow */}
@@ -59,7 +52,7 @@ export default function Stats() {
                   {stat.label}
                 </p>
               </div>
-            </motion.div>
+            </RevealOnScroll>
           ))}
         </div>
       </div>

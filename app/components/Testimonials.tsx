@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import { Quote, Star } from "lucide-react";
 
 const testimonials = [
@@ -18,28 +18,20 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-32 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="text-center mb-20"
-        >
+        <RevealOnScroll className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
             Client <span className="text-gray-500">Voices</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">
             What partners and clients say about our collaborative journey.
           </p>
-        </motion.div>
+        </RevealOnScroll>
 
         <div className="flex flex-wrap justify-center gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <RevealOnScroll
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              delay={index * 100}
               className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col items-center text-center max-w-sm w-full"
             >
               <div className="flex justify-center gap-1 mb-6">
@@ -71,7 +63,7 @@ export default function Testimonials() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </RevealOnScroll>
           ))}
         </div>
 

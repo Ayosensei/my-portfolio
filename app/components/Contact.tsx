@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import React, { useState } from "react";
 
 export default function Contact() {
@@ -56,39 +56,28 @@ export default function Contact() {
 
 
       <div className="max-w-4xl mx-auto z-10 w-full">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight"
-        >
+        <RevealOnScroll>
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">
           Let&apos;s build something <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
             extraordinary.
           </span>
-        </motion.h2>
+          </h2>
+        </RevealOnScroll>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
-        >
+        <RevealOnScroll delay={200}>
+          <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
           Have a project in mind? Send me a message and let&apos;s discuss how
           we can bring your ideas to life.
-        </motion.p>
+          </p>
+        </RevealOnScroll>
 
         {/* Contact Form */}
-        <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-md mx-auto space-y-4 text-left"
-          onSubmit={handleSubmit}
-        >
+        <RevealOnScroll delay={400}>
+          <form
+            className="max-w-md mx-auto space-y-4 text-left"
+            onSubmit={handleSubmit}
+          >
           <div>
             <label
               htmlFor="name"
@@ -160,7 +149,8 @@ export default function Contact() {
           >
             {status === "submitting" ? "Sending..." : "Send Message"}
           </button>
-        </motion.form>
+          </form>
+        </RevealOnScroll>
       </div>
     </section>
   );

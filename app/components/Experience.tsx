@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import { Briefcase, GraduationCap, Calendar, Laptop } from "lucide-react";
 
 const experiences = [
@@ -34,19 +34,14 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="mb-16 text-center"
-        >
+        <RevealOnScroll className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             My{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
               Journey
             </span>
           </h2>
-        </motion.div>
+        </RevealOnScroll>
 
         <div className="relative">
           {/* Vertical Line */}
@@ -54,12 +49,9 @@ export default function Experience() {
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <motion.div
+              <RevealOnScroll
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                delay={index * 100}
                 className={`flex flex-col md:flex-row ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 } items-center gap-8 relative`}
@@ -116,7 +108,7 @@ export default function Experience() {
 
                 {/* Empty Space for the other side */}
                 <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

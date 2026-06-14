@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import RevealOnScroll from "./RevealOnScroll";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -55,12 +55,7 @@ function ProjectCard({
   index: number;
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <RevealOnScroll delay={index * 100}>
       <div
         className="group relative h-full bg-black/40 border border-white/10 p-8 rounded-3xl flex flex-col justify-between hover:border-white/20 transition-colors duration-500 overflow-hidden shadow-2xl"
       >
@@ -116,7 +111,7 @@ function ProjectCard({
           className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-20`}
         />
       </div>
-    </motion.div>
+    </RevealOnScroll>
   );
 }
 
@@ -127,17 +122,12 @@ export default function Projects() {
       className="min-h-screen py-32 px-4 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="mb-24 text-center"
-        >
+        <RevealOnScroll className="mb-24 text-center">
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Selected <span className="text-gray-500">Works</span>
           </h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
-        </motion.div>
+        </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
