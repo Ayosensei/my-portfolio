@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Mail, ExternalLink } from "lucide-react";
+import { ArrowDown, Github, Mail, ExternalLink, FileDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -16,7 +16,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-cyan-400 uppercase bg-cyan-400/10 border border-cyan-400/20 rounded-full"
         >
-          Available for new projects
+          Open to freelance & contract work
         </motion.div>
 
         <motion.h1
@@ -25,9 +25,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-6xl md:text-8xl font-bold tracking-tight text-white mb-6"
         >
-          Engineering <br />
+          Building Digital <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-white to-cyan-400">
-            Digital Excellence.
+            Products That Work.
           </span>
         </motion.h1>
 
@@ -37,9 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed mb-10"
         >
-          I am <span className="text-white font-medium">Ayooluwa Oyebade</span>,
-          a Computer Engineer and Creative Developer specializing in building
-          high-performance web applications with a focus on immersive UI/UX.
+          I am <span className="text-white font-medium">Ayooluwa Oyebade</span>, a Computer Engineer and Creative Developer. I design and build high-performance web apps and brand identities — from concept to deployment — for startups, communities, and creators.
         </motion.p>
 
         <motion.div
@@ -74,6 +72,15 @@ export default function Hero() {
               aria-label="Email"
             >
               <Mail size={20} />
+            </a>
+            <a
+              href="/assets/Ayooluwa_Oyebade_CV.pdf"
+              download
+              className="p-4 bg-white/5 border border-white/10 rounded-full text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-2 text-sm font-medium px-5"
+              aria-label="Download CV"
+            >
+              <FileDown size={20} />
+              CV
             </a>
           </div>
         </motion.div>
